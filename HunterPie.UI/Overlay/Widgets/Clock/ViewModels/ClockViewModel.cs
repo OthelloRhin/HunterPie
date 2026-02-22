@@ -32,7 +32,7 @@ public class ClockViewModel : WidgetViewModel
         ? WorldTime.ToString("HH:mm")
         : WorldTime.ToString("hh:mm tt", new CultureInfo("en-US"));
 
-    public TimeSpan? QuestTimeLeft { get; set => SetValue(ref field, value); }
+    public TimeSpan? QuestTimeLeft { get; set => SetValue(ref field, value); } 
 
     public ObservableCollection<MoonViewModel> Moons { get; } = new();
     public MoonViewModel? Moon { get; set => SetValue(ref field, value); }
