@@ -61,8 +61,8 @@
                                 Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
                                 Foreground="{StaticResource White@700}"/>
                     <TextBlock Grid.Column="1" 
-                               d:Text="10:00"
-                               Text="{Binding WorldTime, Mode=OneWay, StringFormat='HH:mm'}"
+                               d:Text="10:00 PM"
+                               Text="{Binding WorldTimeFormatted, Mode=OneWay, TargetNullValue='--:--'}"
                                Foreground="{StaticResource White@200}"
                                HorizontalAlignment="Right"
                                Margin="5,0,0,0"
