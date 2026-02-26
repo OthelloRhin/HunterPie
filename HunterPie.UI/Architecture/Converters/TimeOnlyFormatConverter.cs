@@ -14,7 +14,7 @@ public class TimeOnlyFormatConverter : IMultiValueConverter
         if (values is not [TimeOnly time, bool use24])
             return Binding.DoNothing;
 
-        var format = use24 ? Format24 : Format12;
+        string format = use24 ? Format24 : Format12;
 
         return use24
             ? time.ToString(format)

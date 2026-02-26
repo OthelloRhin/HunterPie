@@ -8,15 +8,9 @@ using System.Collections.ObjectModel;
 namespace HunterPie.UI.Overlay.Widgets.Clock.ViewModels;
 
 #nullable enable
-public class ClockViewModel : WidgetViewModel
+public class ClockViewModel(ClockWidgetConfig config) : WidgetViewModel(config, "Clock Widget", WidgetType.ClickThrough)
 {
-    private readonly ClockWidgetConfig _config;
-
-    public ClockViewModel(ClockWidgetConfig config)
-        : base(config, "Clock Widget", WidgetType.ClickThrough)
-    {
-        _config = config;
-    }
+    private readonly ClockWidgetConfig _config = config;
 
     public TimeOnly WorldTime
     {
